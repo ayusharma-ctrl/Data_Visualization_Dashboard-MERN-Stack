@@ -1,0 +1,27 @@
+{
+  "name": "data-virtualization-dashboard",
+  "version": "1.0.0",
+  "description": "This project is a Data Visualization Dashboard that uses the MERN Stack to create visualizations. The project uses given JSON data to create a MongoDB database and create an API in node.js to retrieve the data. The visualizations are created using chart.js library. The dashboard has various filters like end year, topics, region, and other controls that can be added from the data. The project aims to generate insights from creative visualizations.",
+  "main": "app.js",
+  "type": "module",
+  "engines": {
+    "node": ">=14.20.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "ayusharma-ctrl"
+  },
+  "author": "ayusharma-ctrl",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0"
+  }
+}
