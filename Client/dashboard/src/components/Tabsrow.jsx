@@ -20,7 +20,7 @@ const Tabsrow = ({ data, setMainData, tempData }) => {
     const handleSearchResult = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.get(`http://localhost:8001/api/data/any/${search}`);
+            const response = await axios.get(`https://dashboard-6bfs.onrender.com/api/data/any/${search}`);
             setMainData(response.data.data);
             setSearch("");
         }

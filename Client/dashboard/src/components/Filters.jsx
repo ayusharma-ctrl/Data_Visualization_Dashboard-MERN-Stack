@@ -11,7 +11,7 @@ const Filters = ({ tempData, setMainData }) => {
 
     const getDataFromDB = async(year) => {
         try{
-            const response = await axios.get(`http://localhost:8001/api/data/year/${year}`);
+            const response = await axios.get(`https://dashboard-6bfs.onrender.com/api/data/year/${year}`);
             setMainData(response.data.data)
         }
         catch(e){
@@ -21,7 +21,7 @@ const Filters = ({ tempData, setMainData }) => {
 
     const handleReset = async() => {
         try{
-            const response = await axios.get("http://localhost:8001/api/data/all");
+            const response = await axios.get("https://dashboard-6bfs.onrender.com/api/data/all");
             setMainData(response.data.data)
         }
         catch(e){
