@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import CardGroup from 'react-bootstrap/CardGroup';
@@ -10,13 +10,13 @@ import AccordionForCharts from './AccordionForCharts';
 import Filters from './Filters';
 import axios from 'axios';
 
-const Tabsrow = ({ data, setMainData, tempData }) => {
-
+const Tabsrow = ({ data, setMainData }) => {
+    // state to store the number of data cards we want to display at a time, we'll update it on click of a button
     const [limit, setLimit] = useState(5);
     const limitedData = data.slice(0, limit);
-
+    // state to store the search bar text
     const [search, setSearch] = useState("");
-
+    // function to make an api call to get the filtered data
     const handleSearchResult = async (e) => {
         e.preventDefault();
         try {
@@ -41,7 +41,7 @@ const Tabsrow = ({ data, setMainData, tempData }) => {
                         <input className="form-control mr-sm-2" type="search" placeholder="Search by Sector Name, Topic, Title, Pestle, Source, Insight, URL..." aria-label="Search" onChange={(e) => setSearch(e.target.value)} style={{ marginRight: '1rem' }} />
                         <button className="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
                     </form>
-                    <Filters tempData={tempData} setMainData={setMainData} />
+                    <Filters setMainData={setMainData} />
 
                     {limitedData && limitedData.length === 0 ? (
                         <div style={{margin:'1rem'}}>No data found, or please wait for a while.</div>
@@ -61,7 +61,7 @@ const Tabsrow = ({ data, setMainData, tempData }) => {
                         <input className="form-control mr-sm-2" type="search" placeholder="Search by Sector Name, Topic, Title, Pestle, Source, Insight, URL..." aria-label="Search" onChange={(e) => setSearch(e.target.value)} style={{ marginRight: '1rem' }} />
                         <button className="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
                     </form>
-                    <Filters tempData={tempData} setMainData={setMainData} />
+                    <Filters setMainData={setMainData} />
                     <AccordionForCharts data={data} />
                 </Tab>
             </Tabs>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 
+// we are returning a dynamic bootstrap card
 const CardsForData = ({ item }) => {
     return (
         <div className='cardDiv'>
