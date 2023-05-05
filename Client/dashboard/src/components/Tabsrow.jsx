@@ -44,7 +44,7 @@ const Tabsrow = ({ data, setMainData, tempData }) => {
                     <Filters tempData={tempData} setMainData={setMainData} />
 
                     {limitedData && limitedData.length === 0 ? (
-                        <div>No Data Found, please reset your filters.</div>
+                        <div style={{margin:'1rem'}}>No data found, or please wait for a while.</div>
                     ) : limitedData && limitedData.length > 0 ? (
                         <CardGroup>
                             {limitedData.map((e, i) => {

@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 const CardsForData = ({ item }) => {
     return (
         <div className='cardDiv'>
-            <Card bg='light' border='dark' style={{ width: '16rem', margin: '1.2rem' }}>
+            <Card bg='light' border='dark' style={{ width: '14rem', margin: '1.2rem' }}>
                 <Card.Body>
                     <Card.Title>Project Details</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{item.sector ? item.sector : "Sector"}</Card.Subtitle>
