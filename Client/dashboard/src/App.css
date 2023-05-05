@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.tabsClass {
+  margin: 1vw 2vw;
+}
+
+.cardText {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardDiv {
+  transition: transform 0.2s ease-in-out;
+}
+
+.cardDiv:hover{
+  transform: scale(0.9);
+  background-color: thistle;
+}
