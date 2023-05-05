@@ -12,10 +12,6 @@
     "dev": "nodemon app.js",
     "start": "node app.js" 
   },
-  "repository": {
-    "type": "git",
-    "url": "ayusharma-ctrl"
-  },
   "author": "ayusharma-ctrl",
   "license": "ISC",
   "dependencies": {
